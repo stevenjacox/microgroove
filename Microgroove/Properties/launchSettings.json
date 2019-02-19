@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Microgroove": {
+      "commandName": "Project",
+      "commandLineArgs": "file.csv"
+    }
+  }
+}

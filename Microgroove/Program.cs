@@ -1,4 +1,9 @@
-﻿using System;
+﻿using Microgroove.Models;
+using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 namespace Microgroove
 {
@@ -6,7 +11,18 @@ namespace Microgroove
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
+            Utility util = new Utility();
+
+            List<List<string>> lines = util.ReadAllLinesIntoAList(args[0]);
+
+            string json = util.ProcessLines(lines);
+            
+            Console.Write(json);
+            Console.ReadKey();
         }
+
+        
+
     }
 }
